@@ -1,0 +1,20 @@
+[app]
+name = "MyAwesomeApp"
+version = "1.0.0"
+publisher = "YourCompany"
+main_exe = "app.exe"
+# icon = "app.ico"
+
+[install]
+source_dir = "payload"
+default_dir = "%APPDATA%\\MyAwesomeApp"
+create_desktop_shortcut = true
+create_start_menu_shortcut = true
+
+[build]
+output_name = "MyAwesomeApp_Setup_x64.exe"
+compression_level = 19
+
+[hooks]
+post_install = "scripts/post_install.bat"
+pre_uninstall = "scripts/pre_uninstall.bat"
