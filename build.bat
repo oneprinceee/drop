@@ -19,7 +19,7 @@ if errorlevel 1 (
 if not exist "dist" mkdir "dist"
 
 set "OUT_NAME=setup.exe"
-for /f "tokens=2 delims==" %%i in ('findstr /i "output_name" drop.toml') do (
+for /f "tokens=2 delims==" %%i in ('findstr /i "output_name" CONFIG.toml') do (
     for /f "tokens=1 delims= " %%j in ("%%~i") do (
         set "TEMP_NAME=%%j"
         set "TEMP_NAME=!TEMP_NAME:"=!"

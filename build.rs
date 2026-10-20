@@ -47,15 +47,15 @@ struct HooksConfig {
 }
 
 fn main() {
-    println!("cargo:rerun-if-changed=drop.toml");
+    println!("cargo:rerun-if-changed=CONFIG.toml");
 
     let manifest_dir = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap());
-    let config_path = manifest_dir.join("drop.toml");
-    let mut config_file = File::open(&config_path).expect("failed to open drop.toml");
+    let config_path = manifest_dir.join("CONFIG.toml");
+    let mut config_file = File::open(&config_path).expect("failed to open CONFIG.toml");
     let mut config_str = String::new();
-    config_file.read_to_string(&mut config_str).expect("failed to read drop.toml");
+    config_file.read_to_string(&mut config_str).expect("failed to read CONFIG.toml");
 
-    let config: Config = toml::from_str(&config_str).expect("failed to parse drop.toml");
+    let config: Config = toml::from_str(&config_str).expect("failed to parse CONFIG.toml");
 
     let mut res = winres::WindowsResource::new();
     if let Some(icon_file) = &config.app.icon {

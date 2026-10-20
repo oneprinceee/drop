@@ -15,7 +15,7 @@ ultra lightweight and fully open-source installer engine for windows written in 
 - native win32 ui (`native-windows-gui`), no electron or chromium
 - strong payload compression using `zstd` and `tar`
 - single standalone `.exe` with embedded assets
-- no code edits required, configured via `drop.toml`
+- no code edits required, configured via `CONFIG.toml`
 - supports `%appdata%`, `%localappdata%`, `%programfiles%` paths
 - automatic desktop and start menu shortcuts
 - built-in uninstaller (`unins000.exe` / `--uninstall`)
@@ -26,7 +26,7 @@ ultra lightweight and fully open-source installer engine for windows written in 
 
 1. download repository (Code -> Download ZIP or `git clone`)
 2. put your files into `payload/`
-3. configure `drop.toml`
+3. configure `CONFIG.toml`
 4. run `build.bat` (output will be in `dist/`)
 
 ---
@@ -42,7 +42,7 @@ ultra lightweight and fully open-source installer engine for windows written in 
 - нативный win32 интерфейс (`native-windows-gui`), без электрона и хромиума
 - сильное сжатие файлов через `zstd` и `tar`
 - один готовый `.exe` со всеми ресурсами внутри
-- настраивается через `drop.toml`, код менять не нужно
+- настраивается через `CONFIG.toml`, код менять не нужно
 - поддержка системных путей (`%appdata%`, `%localappdata%`, `%programfiles%`)
 - создание ярлыков на рабочем столе и в меню пуск
 - встроенный удалятор (`unins000.exe` / `--uninstall`)
@@ -53,5 +53,5 @@ ultra lightweight and fully open-source installer engine for windows written in 
 
 1. скачайте репозиторий (Code -> Download ZIP или `git clone`)
 2. закиньте файлы своей программы в `payload/`
-3. настройте `drop.toml`
+3. настройте `CONFIG.toml`
 4. запустите `build.bat` (готовый установщик появится в `dist/`)
